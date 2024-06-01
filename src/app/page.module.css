@@ -1,0 +1,34 @@
+/* Run string */
+.runstring {
+  width: 100%;
+  background: #00b5f2;
+  padding: 1.25rem 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.runstring,
+.marquee {
+  gap: 25px;
+}
+
+.marquee {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 100%;
+  animation: scrollDesktop 20s infinite linear;
+}
+
+@keyframes scrollDesktop {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(calc(-100% - 25px));
+  }
+}
