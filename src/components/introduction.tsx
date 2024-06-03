@@ -4,6 +4,7 @@ import { ArrowUpRight, Linkedin } from 'lucide-react';
 import MaxWidthWrapper from './max-width-wrapper';
 import { useRouter } from 'next/navigation';
 import { TextGenerateEffect } from './ui/text-generate-effect';
+import Image from 'next/image';
 
 const Introduction = () => {
   const router = useRouter();
@@ -32,7 +33,31 @@ const Introduction = () => {
             </div>
           </div>
 
-          <TextGenerateEffect words={words} />
+          <div className='mx-auto grid max-w-2xl grid-cols-1 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2 gap-y-16'>
+            {/* First User Review */}
+            <div className='flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20'>
+              <div>
+                <Image
+                  src='/images/catcents.jpg'
+                  width={700}
+                  height={700}
+                  alt=''
+                  className='rounded-md'
+                />
+              </div>
+            </div>
+
+            {/* second user review */}
+            <div className='flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20'>
+              <Image
+                src='/images/catcents.jpg'
+                width={700}
+                height={700}
+                alt=''
+                className='rounded-md'
+              />
+            </div>
+          </div>
         </div>
       </MaxWidthWrapper>
     </section>

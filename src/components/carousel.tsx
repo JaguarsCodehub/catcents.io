@@ -1,4 +1,7 @@
+'use client';
+
 import * as React from 'react';
+import { useState, useEffect } from 'react';
 
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -21,7 +24,7 @@ const imageData = [
   },
   {
     id: '2',
-    src: '/images/catcents.jpg',
+    src: '/images/catcentsHero.png',
     width: 800,
     height: 800,
     className: 'w-full h-full',
@@ -29,7 +32,7 @@ const imageData = [
   },
   {
     id: '3',
-    src: '/images/catcents.jpg',
+    src: '/images/hero2.png',
     width: 800,
     height: 800,
     className: 'w-full h-full',
@@ -38,13 +41,23 @@ const imageData = [
 ];
 
 export function CarouselDemo() {
+  const [currentItemIndex, setCurrentItemIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentItemIndex((prevIndex) => (prevIndex + 1) % imageData.length);
+    }, 2000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Carousel className='w-full max-w-md'>
-      <CarouselContent>
+      <CarouselContent
+        style={{ transform: `translateX(-${currentItemIndex * 100}%)` }}
+      >
         {imageData.map((image, index) => (
           <CarouselItem key={index}>
-            {/* <div className='p-1'> */}
-            {/* <Card> */}
             <CardContent className='flex aspect-square items-center justify-center p-6'>
               <Image
                 id={image.id}
@@ -55,13 +68,9 @@ export function CarouselDemo() {
                 objectFit='cover'
               />
             </CardContent>
-            {/* </Card> */}
-            {/* </div> */}
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
     </Carousel>
   );
 }
