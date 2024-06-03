@@ -7,8 +7,11 @@ import Footer from '@/components/footer';
 const poppins = Poppins({ weight: '500', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Catcents.io',
+  title: 'Catcents',
   description: 'The base network will be more fun with Catcents.io',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({

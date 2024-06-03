@@ -7,86 +7,49 @@ import {
 
 export function CustomAccordion() {
   return (
-    <div className='flex p-24 m-auto items-center justify-center'>
+    <div className='flex p-12 lg:p-44 m-auto items-center justify-center'>
       <Accordion
         type='single'
         collapsible
         className='w-full text-4xl no-underline border-0'
       >
         <AccordionItem value='item-1'>
-          <AccordionTrigger>When I can join the waitlist</AccordionTrigger>
-          <AccordionContent>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+          <AccordionTrigger className='text-xl lg:text-4xl'>
+            What is Catcents ?
+          </AccordionTrigger>
+          <AccordionContent className='text-rose-500 lg:text-2xl'>
+            Cat cents token ($____?) is a community-driven meme coin that
+            combines humor and innovation in the world of meme
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value='item-2'>
-          <AccordionTrigger>Is Catcents verified ?</AccordionTrigger>
-          <AccordionContent>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+          <AccordionTrigger className='text-xl lg:text-4xl'>
+            What are the token Details
+          </AccordionTrigger>
+          <AccordionContent className='text-rose-500 lg:text-2xl'>
+            $____? boasts a total supply of 10,000,000,000, tokens on the BASE
+            Chain , supported by secure and transparent smart contracts.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value='item-3'>
-          <AccordionTrigger>
-            What is the average value of each NFT
+          <AccordionTrigger className='text-xl lg:text-4xl'>
+            Why cat cents?
           </AccordionTrigger>
-          <AccordionContent>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+          <AccordionContent className='text-rose-500 lg:text-2xl'>
+            Investing in cat cents provides an opportunity to join a vibrant
+            community, benefit from innovative tokenomics for stability and
+            rewards.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value='item-4'>
-          <AccordionTrigger>
-            This Website looks so cool, How you did it ?
+          <AccordionTrigger className='text-xl lg:text-4xl'>
+            When is the cat cents Presale?
           </AccordionTrigger>
-          <AccordionContent>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value='item-5'>
-          <AccordionTrigger>
-            Who is the developer behind this website ?
-          </AccordionTrigger>
-          <AccordionContent>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+          <AccordionContent className='text-rose-500 lg:text-2xl'>
+            Stay tuned for upcoming presale/IDO announcements on official
+            channels, offering a chance to participate early in cat cents
+            journey, revolutionizing the crypto space with laughter and
+            innovation.
           </AccordionContent>
         </AccordionItem>
       </Accordion>

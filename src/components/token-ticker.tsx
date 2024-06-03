@@ -18,9 +18,9 @@ import { Progress } from './ui/progress';
 
 const TokenomicsEmbed = () => {
   return (
-    <section className='grid justify-between max-w-xl m-12 grid-cols-1 px-4 lg:mx-12 lg:max-w-none lg:grid-cols-2 gap-y-16'>
+    <section className='grid justify-between mt-12 max-w-xl grid-cols-1 px-4 lg:mx-12 lg:max-w-none lg:grid-cols-2 gap-y-16'>
       <div className='flex flex-col gap-4 lg:pr-8 xl:pr-20 m-0 lg:ml-24'>
-        <Card className='bg-rose-500'>
+        <Card className='bg-cyan-500'>
           <CardHeader>
             <CardTitle className='text-4xl text-white font-bold'>
               $CATC
@@ -63,24 +63,26 @@ const TokenomicsEmbed = () => {
           </CardContent>
         </Card>
       </div>
-      <PieChart
-        series={[
-          {
-            data: [
-              { id: 0, value: 45 },
-              { id: 1, value: 30 },
-              { id: 2, value: 5 },
-              { id: 3, value: 10 },
-              { id: 4, value: 10 },
-            ],
-            highlightScope: { faded: 'global', highlighted: 'item' },
-            faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
-          },
-        ]}
-        width={500}
-        height={500}
-        // className='w-[500px] h-[500px]'
-      />
+      <div className=''>
+        <PieChart
+          series={[
+            {
+              data: [
+                { id: 0, value: 45 },
+                { id: 1, value: 30 },
+                { id: 2, value: 5 },
+                { id: 3, value: 10 },
+                { id: 4, value: 10 },
+              ],
+              highlightScope: { faded: 'global', highlighted: 'item' },
+              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+            },
+          ]}
+          // width={500}
+          height={500}
+          // className='w-[300px] h-[150px] lg:w-[500px] lg:h-[350px]'
+        />
+      </div>
     </section>
   );
 };

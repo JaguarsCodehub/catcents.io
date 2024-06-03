@@ -1,7 +1,9 @@
 'use client';
 
 import { Twitter, X } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
+import { SocialIcon } from 'react-social-icons';
 
 type NavItem = {
   href: string;
@@ -10,14 +12,15 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-  { href: '/', label: 'Home', isActive: true },
-  { href: '#about', label: 'About' },
-  { href: '#tokenticker', label: 'Token Ticker' },
+  { href: '/', label: 'HOME', isActive: true },
+  { href: '#about', label: 'ABOUT' },
+  { href: '#tokenticker', label: 'TOKENOMICS ' },
   { href: '#faq', label: 'FAQ' },
 ];
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -28,17 +31,22 @@ export const Navbar = () => {
       <nav className='bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600'>
         <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
           <a
-            href='https://flowbite.com/'
+            href='/'
             className='flex items-center space-x-3 rtl:space-x-reverse'
           >
             <span className='self-center text-2xl font-semibold whitespace-nowrap dark:text-white'>
-              Catcents.io
+              Catcents
             </span>
           </a>
           <div className='flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse'>
-            <Twitter className='h-8 w-8 rounded-full bg-black text-white p-2 items-center justify-center mr-2 cursor-pointer' />
+            <SocialIcon
+              url='https://x.com'
+              style={{ width: 40, height: 40, marginRight: 8 }}
+              href='https://x.com/catcentsio'
+            />
             <button
               type='button'
+              onClick={() => router.push('https://x.com/catcentsio')}
               className='text-white bg-rose-500 hover:bg-rose-800 focus:ring-4 focus:outline-none focus:ring-rose-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-rose-600 dark:hover:bg-rose-500 dark:focus:ring-rose-800'
             >
               Get started
@@ -89,6 +97,7 @@ export const Navbar = () => {
                         : 'text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-rose-500 md:p-0 md:dark:hover:text-rose-500 dark:text-white dark:hover:bg-gray-500 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-500'
                     }`}
                     aria-current={item.isActive ? 'page' : undefined}
+                    onClick={() => toggleMenu()}
                   >
                     {item.label}
                   </a>

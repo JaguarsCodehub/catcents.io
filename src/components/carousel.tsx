@@ -19,7 +19,7 @@ const imageData = [
     src: '/images/catcents.jpg',
     width: 800,
     height: 800,
-    className: 'w-full h-full',
+    className: 'w-full h-full rounded-xl',
     alt: 'Hero',
   },
   {
@@ -27,7 +27,7 @@ const imageData = [
     src: '/images/catcentsHero.png',
     width: 800,
     height: 800,
-    className: 'w-full h-full',
+    className: 'w-full h-full rounded-xl',
     alt: 'Hero',
   },
   {
@@ -35,7 +35,7 @@ const imageData = [
     src: '/images/hero2.png',
     width: 800,
     height: 800,
-    className: 'w-full h-full',
+    className: 'w-full h-full rounded-xl',
     alt: 'Hero',
   },
 ];
@@ -58,7 +58,7 @@ export function CarouselDemo() {
       >
         {imageData.map((image, index) => (
           <CarouselItem key={index}>
-            <CardContent className='flex aspect-square items-center justify-center p-6'>
+            <CardContent className='flex aspect-square items-center justify-center p-6 rounded-md'>
               <Image
                 id={image.id}
                 src={image.src}
@@ -66,6 +66,7 @@ export function CarouselDemo() {
                 width={image.width}
                 height={image.width}
                 objectFit='cover'
+                className={image.className}
               />
             </CardContent>
           </CarouselItem>

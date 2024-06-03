@@ -12,6 +12,11 @@ import { CarouselDemo } from '@/components/carousel';
 import { useRouter } from 'next/navigation';
 import { CustomAccordion } from '@/components/custom-accordion';
 import TokenTicker from '@/components/token-ticker';
+import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
+
+const words = `In the world of crypto projects, there was a little cat named CatCents, known for its super speed. Three friends found CatCents and decided to give it a chance to shine.
+After saving CatCents, it became a star! It appeared in movies, games, and even big sports events (or at least, we think so – its a bit fuzzy).
+But CatCents is not just famous – it is also a symbol of fun and possibility in the crypto world. With its charm and speed, CatCents has become a favorite among crypto fans.`;
 
 export default function Home() {
   const router = useRouter();
@@ -29,14 +34,21 @@ export default function Home() {
                 <span className='bg-rose-500 text-white'>CatCents.</span>
               </h1>
               <p className='mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap'>
-                Catcents is a Hybrid DeFi (SPL-404) project on Solana CatCents
-                brings together the NFT and meme coin communities, offering lots
-                of potential.
+                CatCents brings together the NFT and meme coin communities,
+                offering lots of potential.
               </p>
 
               <div className='flex flex-row pt-4 items-center justify-end'>
-                <Button className=''>Mint NFT Now !</Button>
-                <Button className='ml-4 bg-rose-500 text-white hover:bg-rose-800'>
+                <Button
+                  onClick={() => router.push('https://x.com/catcentsio')}
+                  className=''
+                >
+                  Mint NFT Now !
+                </Button>
+                <Button
+                  onClick={() => router.push('https://x.com/catcentsio')}
+                  className='ml-4 bg-rose-500 text-white hover:bg-rose-800'
+                >
                   Join our Waitlist
                 </Button>
               </div>
@@ -58,11 +70,17 @@ export default function Home() {
             </div>
           </div>
         </MaxWidthWrapper>
-      </section>{' '}
+      </section>
       <section>
         <RunningString />
       </section>
-      <section id='about'>
+      <section id='#about' className=' p-4 lg:p-24'>
+        <div className='flex flex-col items-center justify-normal p-12'>
+          <h1 className='text-5xl lg:text-7xl font-semibold'>ABOUT</h1>
+        </div>
+        <TextGenerateEffect words={words} />
+      </section>
+      {/* <section id='about'>
         <MaxWidthWrapper className='pb-24 pt-10 lg:grid lg:grid-cols-4 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-32 lg:pb-52'>
           <div className='col-span-full lg:col-span-2 flex justify-center px-8 sm:px-16 md:px-0 mt-32 lg:mx-0 lg:mt-20'>
             <div className='relative max-w-5xl md:max-w-3xl'>
@@ -113,18 +131,16 @@ export default function Home() {
             </div>
           </div>
         </MaxWidthWrapper>
-      </section>
+      </section> */}
       <section id='tokenticker'>
         <div className='flex flex-col items-center justify-normal p-12'>
-          <h1 className='text-5xl lg:text-7xl font-semibold'>Tokenomics 💰</h1>
+          <h1 className='text-5xl lg:text-7xl font-semibold'>TOKENOMICS</h1>
         </div>
         <TokenTicker />
       </section>
       <section id='faq'>
-        <div className='flex flex-col items-center justify-normal p-12'>
-          <h1 className='text-2xl lg:text-5xl font-semibold'>
-            Frequently Asked Questions 🤔
-          </h1>
+        <div className='flex flex-col mt-20 font-semibold  items-center justify-normal p-12'>
+          <h1 className='text-4xl lg:text-6xl font-semibold'>FAQ</h1>
         </div>
         <CustomAccordion />
       </section>
