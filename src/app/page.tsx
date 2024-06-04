@@ -139,7 +139,7 @@ export default function Home() {
         <TokenTicker />
       </section>
       <section id='faq'>
-        <div className='flex flex-col mt-20 font-semibold  items-center justify-normal p-12'>
+        <div className='flex flex-col mt-4 font-semibold  items-center justify-normal p-12'>
           <h1 className='text-4xl lg:text-6xl font-semibold'>FAQ</h1>
         </div>
         <CustomAccordion />

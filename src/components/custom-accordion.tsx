@@ -7,14 +7,14 @@ import {
 
 export function CustomAccordion() {
   return (
-    <div className='flex p-12 lg:p-44 m-auto items-center justify-center'>
+    <div className='flex p-12 lg:p-44 m-auto text-left text-wrap'>
       <Accordion
         type='single'
         collapsible
-        className='w-full text-4xl no-underline border-0'
+        className='w-full align-baseline text-4xl justify-items-start text-left items-start no-underline border-0'
       >
         <AccordionItem value='item-1'>
-          <AccordionTrigger className='text-xl lg:text-4xl'>
+          <AccordionTrigger className='text-xl lg:text-4xl text-left'>
             What is Catcents ?
           </AccordionTrigger>
           <AccordionContent className='text-rose-500 lg:text-2xl'>
@@ -23,7 +23,7 @@ export function CustomAccordion() {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value='item-2'>
-          <AccordionTrigger className='text-xl lg:text-4xl'>
+          <AccordionTrigger className='text-xl lg:text-4xl text-left'>
             What are the token Details
           </AccordionTrigger>
           <AccordionContent className='text-rose-500 lg:text-2xl'>
@@ -32,7 +32,7 @@ export function CustomAccordion() {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value='item-3'>
-          <AccordionTrigger className='text-xl lg:text-4xl'>
+          <AccordionTrigger className='text-xl lg:text-4xl text-left'>
             Why cat cents?
           </AccordionTrigger>
           <AccordionContent className='text-rose-500 lg:text-2xl'>
@@ -42,7 +42,7 @@ export function CustomAccordion() {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value='item-4'>
-          <AccordionTrigger className='text-xl lg:text-4xl'>
+          <AccordionTrigger className='text-xl lg:text-4xl text-left'>
             When is the cat cents Presale?
           </AccordionTrigger>
           <AccordionContent className='text-rose-500 lg:text-2xl'>

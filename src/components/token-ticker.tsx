@@ -18,7 +18,7 @@ import { Progress } from './ui/progress';
 
 const TokenomicsEmbed = () => {
   return (
-    <section className='grid justify-between mt-12 max-w-xl grid-cols-1 px-4 lg:mx-12 lg:max-w-none lg:grid-cols-2 gap-y-16'>
+    <section className='grid mt-12 max-w-xl grid-cols-1 px-4 lg:mx-12 lg:max-w-none lg:grid-cols-2'>
       <div className='flex flex-col gap-4 lg:pr-8 xl:pr-20 m-0 lg:ml-24'>
         <Card className='bg-cyan-500'>
           <CardHeader>
@@ -63,7 +63,7 @@ const TokenomicsEmbed = () => {
           </CardContent>
         </Card>
       </div>
-      <div className=''>
+      <div className='sm:mb-24 flex flex-col mb-12 lg:mt-0'>
         <PieChart
           series={[
             {
@@ -78,8 +78,8 @@ const TokenomicsEmbed = () => {
               faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
             },
           ]}
-          // width={500}
           height={500}
+          // width={350}
           // className='w-[300px] h-[150px] lg:w-[500px] lg:h-[350px]'
         />
       </div>
