@@ -49,7 +49,7 @@ export default function Home() {
                   onClick={() => router.push('https://x.com/catcentsio')}
                   className='ml-4 bg-rose-500 text-white hover:bg-rose-800'
                 >
-                  Join our Waitlist
+                  Join our Whitelist
                 </Button>
               </div>
             </div>

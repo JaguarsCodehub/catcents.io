@@ -5,30 +5,30 @@ const RunningString = () => {
     <div className='runstring'>
       <p className='marquee'>
         <span>
-          {''}Join Waitlist for updates {''}
+          {''}Join Whitelist for updates {''}
         </span>
         <span>
           {' '}
-          {''}Join Waitlist for updates {''}
+          {''}Join Whitelist for updates {''}
         </span>
         <span>
           {' '}
-          {''}Join Waitlist for updates {''}
+          {''}Join Whitelist for updates {''}
         </span>
         <span>
           {' '}
-          {''}Join Waitlist for updates {''}
+          {''}Join Whitelist for updates {''}
         </span>
       </p>
       <p className='marquee'>
         <span>
-          {''}Join Waitlist for updates {''}
+          {''}Join Whitelist for updates {''}
         </span>
-        <span> {''}Join Waitlist for updates</span>
-        <span> {''}Join Waitlist for updates</span>
+        <span> {''}Join Whitelist for updates</span>
+        <span> {''}Join Whitelist for updates</span>
         <span>
           {' '}
-          {''}Join Waitlist for updates {''}
+          {''}Join Whitelist for updates {''}
         </span>
       </p>
     </div>

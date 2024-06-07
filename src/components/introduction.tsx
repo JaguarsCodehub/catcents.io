@@ -28,7 +28,7 @@ const Introduction = () => {
                 onClick={() => router.push('https://github.com/JaguarsCodehub')}
               >
                 <ArrowUpRight className='mr-2 h-4 w-4 text-white' />
-                Join our Waitlist
+                Join our Whitelist
               </Button>
             </div>
           </div>

@@ -18,7 +18,7 @@ export function CustomAccordion() {
             What is Catcents ?
           </AccordionTrigger>
           <AccordionContent className='text-rose-500 lg:text-2xl'>
-            Cat cents token ($____?) is a community-driven meme coin that
+            Cat cents token ($CATC?) is a community-driven meme coin that
             combines humor and innovation in the world of meme
           </AccordionContent>
         </AccordionItem>
@@ -27,7 +27,7 @@ export function CustomAccordion() {
             What are the token Details
           </AccordionTrigger>
           <AccordionContent className='text-rose-500 lg:text-2xl'>
-            $____? boasts a total supply of 10,000,000,000, tokens on the BASE
+            $CATC? boasts a total supply of 10,000,000,000, tokens on the BASE
             Chain , supported by secure and transparent smart contracts.
           </AccordionContent>
         </AccordionItem>
